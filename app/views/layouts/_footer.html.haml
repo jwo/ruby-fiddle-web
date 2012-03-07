@@ -1,3 +1,19 @@
 %footer
   .row
-    Stuff Goes Here
+    .four.columns
+      .centered
+        Created By 
+        =link_to "@jwo", "http://twitter.com/jwo"
+        for
+        =link_to "rubyoffrails", "http://rubyoffrails.com"
+    .four.columns
+      .centered
+        Inspired by 
+        =link_to "JSFiddle", "http://jsfiddle.com"
+    .four.columns
+      .centered
+        =link_to "http://", :class=> "white large radius button" do
+          %i.icon-github-sign.icon-large
+          Yes, On Github
+=render partial: "layouts/modals"
+=render partial: "layouts/gauges"

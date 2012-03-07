@@ -1,11 +1,21 @@
 .container.riddle
   .row
-    .four.columns
+    .five.columns
+      %ul.block-grid.three-up
+        %li
+          =link_to "#", :id=>"save_riddle", "data-reveal-id" => "coming-soon",  :class=> "white small radius button" do
+            %i.icon-edit.icon-large
+            Save
+        %li
+          =link_to "#", :id=>"fork_riddle", "data-reveal-id" => "coming-soon",:class=> "white small radius button" do
+            %i.icon-share.icon-large
+            Fork
+  .row
+    .five.columns
       %h2 Console
-      =simple_form_for(@riddle) do |f|
-        =f.input :code, :as => :text, label: false
-        =f.submit "Run Ruby Fiddle", :class=>"nice large button"
-    .eight.columns
+      =render partial: "form"
+
+    .seven.columns
       %h2 Output
       .panel
         -if @riddle_result.present?

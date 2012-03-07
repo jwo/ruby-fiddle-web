@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 body {
-  background: url("http://subtlepatterns.com/patterns/furley_bg.png");
+  background: url("<%= asset_path('furley_bg.png') %>");
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -8,5 +8,13 @@ body {
   font-family: "Monaco", "Ubuntu", sans-serif;
   textarea{
     height: 150px;
+  }
+}
+
+footer {
+  margin-top: 60px;
+  .row{
+    padding-top: 3em;
+    border-top: 1px solid #ccc;
   }
 }
