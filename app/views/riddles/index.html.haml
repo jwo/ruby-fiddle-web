@@ -1,9 +1,17 @@
 .container
   .row
     %h1 New Riddle
-    =simple_form_for(@riddle) do |f|
-      =f.input :code, :as => :text
-      =f.submit "Save Riddle"
-
-    -if @riddle.result
-      %code=@riddle.result
+  .row
+    .four.columns
+      %h2 Console
+      =simple_form_for(@riddle) do |f|
+        =f.input :code, :as => :text, label: false
+        =f.submit "Save Riddle"
+    .eight.columns
+      %h2 Output
+      %code
+        =@riddle.output if @riddle.output.present?
+        %br
+        =" => #{@riddle.result}" if @riddle.result.present?
+        %br
+        =@riddle.exception
