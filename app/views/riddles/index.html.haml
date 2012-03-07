@@ -9,9 +9,10 @@
         =f.submit "Save Riddle"
     .eight.columns
       %h2 Output
-      %code
-        =simple_format @riddle.output if @riddle.output.present?
-        %br
-        =simple_format " => #{@riddle.result}" if @riddle.result.present?
-        %br
-        =simple_format @riddle.exception
+      -if @riddle_result.present?
+        %code
+          =simple_format @riddle_result.output if @riddle_result.output.present?
+          %br
+          =simple_format " => #{@riddle_result.result}" if @riddle_result.result.present?
+          %br
+          =simple_format @riddle_result.exception

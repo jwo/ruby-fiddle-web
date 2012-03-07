@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://ruby-fiddle-exec.heroku.com/
+    body:
+      encoding: US-ASCII
+      string: code=++++puts+1%2F5.to_f%0A++++5*10%0A
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      content-type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 07 Mar 2012 20:31:17 GMT
+      content-type:
+      - application/json;charset=utf-8
+      connection:
+      - keep-alive
+      x-frame-options:
+      - sameorigin
+      x-xss-protection:
+      - 1; mode=block
+      content-length:
+      - '47'
+    body:
+      encoding: US-ASCII
+      string: ! '{"output":"0.2\n","exception":null,"result":50}'
+    http_version: '1.1'
+  recorded_at: Wed, 07 Mar 2012 20:31:16 GMT
+recorded_with: VCR 2.0.0

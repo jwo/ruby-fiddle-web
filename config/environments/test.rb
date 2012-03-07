@@ -34,4 +34,5 @@ Rubyfiddle::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  config.ruby_fiddle_exec_url = "http://ruby-fiddle-exec.heroku.com"
 end

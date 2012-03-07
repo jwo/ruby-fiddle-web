@@ -4,8 +4,8 @@ class RiddlesController < ApplicationController
   end
 
   def create
-    @riddle = Riddle.new(params[:riddle])
-    @riddle.execute(@riddle.code)
+    @riddle = Riddle.new(params[:riddle].slice(:code))
+    @riddle_result = RiddleExec.new(Rails.configuration.ruby_fiddle_exec_url).execute(@riddle.code)
     render :index
   end
 end
