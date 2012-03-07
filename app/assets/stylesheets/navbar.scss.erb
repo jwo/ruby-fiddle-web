@@ -1,0 +1,88 @@
+@import "compass/css3/images";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+#navBar {
+  font-family: 'Ubuntu', sans-serif;
+  @include background(radial-gradient(#9B111E, #841B2D));
+  @include box-shadow;
+  padding-top: 6px;
+  margin-bottom: 20px;
+  h1 a {
+    color: white;
+    font-size: 46px;
+    line-height: 1.6;
+    font-weight: bold;
+    float: left;
+  }
+  h1, h2 {
+    margin-bottom: 0;
+    line-height: 1;
+    padding-right: 20px;
+  }
+  .nav-bar {
+    a {
+      color: #fff;
+      line-height: 14px;
+      font-weight: 500;
+      padding: 0 8px;
+    }
+    background: none;
+    border: none;
+    float: right;
+    margin: 30px 0 0 0;
+    li {
+      border: 0;
+      line-height: 35px;
+      height: 40px;
+      &.has-flyout {
+        a {
+          padding-right: 36px;
+        }
+      }
+      &.right {
+        text-align: right;
+      }
+    }
+    .flyout {
+      width: 160px;
+      top: 40px;
+      background: #2b3143;
+      border: 0;
+      padding: 0;
+      @include border-bottom-right-radius(5px);
+      @include border-bottom-left-radius(5px);
+      a, a:visited {
+        color: #8691b3;
+        display: block;
+        padding: 10px;
+      }
+      a:hover {
+        background: #8691b3;
+        color: #2b3143;
+      }
+      li {
+        padding: 0;
+        margin: 0;
+        height: auto;
+        &.seperator {
+          border-top: 1px solid #1d222e;
+          border-bottom: 1px solid #384058;
+        }
+      }
+    }
+    .search {
+      margin-top: -5px;
+      float: right;
+    }
+  }
+  .nav-bar.secondary {
+    li {
+    }
+  }
+}
+.nav-bar > li.has-flyout > a::after  {
+  border-top: 4px solid #bfbfbf;
+  top: 5px;
+}

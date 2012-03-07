@@ -6,6 +6,7 @@ gem "simple_form", :git => "git://github.com/jwo/simple_form.git", :branch=>"zur
 gem "haml-rails"
 gem 'sqlite3'
 gem 'jquery-rails'
+gem "compass-rails", ">=0.12"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

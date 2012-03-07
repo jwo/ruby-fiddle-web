@@ -1,18 +1,17 @@
-.container
-  .row
-    %h1 New Riddle
+.container.riddle
   .row
     .four.columns
       %h2 Console
       =simple_form_for(@riddle) do |f|
         =f.input :code, :as => :text, label: false
-        =f.submit "Save Riddle"
+        =f.submit "Run Ruby Fiddle", :class=>"nice large button"
     .eight.columns
       %h2 Output
-      -if @riddle_result.present?
-        %code
-          =simple_format @riddle_result.output if @riddle_result.output.present?
-          %br
-          =simple_format " => #{@riddle_result.result}" if @riddle_result.result.present?
-          %br
-          =simple_format @riddle_result.exception
+      .panel
+        -if @riddle_result.present?
+          %code
+            =simple_format @riddle_result.output if @riddle_result.output.present?
+            %br
+            =" => #{@riddle_result.result}" if @riddle_result.result.present?
+            %br
+            =simple_format @riddle_result.exception

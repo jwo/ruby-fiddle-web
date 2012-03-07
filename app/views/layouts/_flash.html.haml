@@ -1,0 +1,11 @@
+.container
+  .row
+    .twelve.columns
+      -if alert
+        .alert-box.error
+          =alert
+          %a.close &times;
+      -if notice
+        .alert-box.success
+          =notice
+          %a.close &times;
