@@ -28,4 +28,10 @@ describe Riddle do
     ex.should be_a(Exception)
   end
 
+  it "shouldn't throw a syntax error" do
+    expect {
+      subject.execute("1+{")
+    }.to_not raise_error
+  end
+
 end

@@ -12,6 +12,8 @@ class Riddle < ActiveRecord::Base
       eval(code)
     rescue => exc
       @exception = exc
+    rescue SyntaxError => se
+      @exception = exc
     end
   end
 
