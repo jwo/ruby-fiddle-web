@@ -1,0 +1,9 @@
+.container
+  .row
+    %h1 New Riddle
+    =simple_form_for(@riddle) do |f|
+      =f.input :code, :as => :text
+      =f.submit "Save Riddle"
+
+    -if @riddle.result
+      %code=@riddle.result
