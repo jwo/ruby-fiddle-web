@@ -79,6 +79,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.1.0)
+    paper_trail (2.6.0)
+      rails (~> 3)
     pg (0.13.2)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -155,6 +157,7 @@ DEPENDENCIES
   fakeweb
   haml-rails
   jquery-rails
+  paper_trail (~> 2)
   pg
   rails (= 3.2.2)
   rspec-rails (>= 2.8.0)

@@ -3,9 +3,14 @@
     .five.columns
       %ul.block-grid.three-up
         %li
-          =link_to "#", :id=>"save_riddle", "data-reveal-id" => "coming-soon",  :class=> "white small radius button" do
-            %i.icon-edit.icon-large
-            Save
+          -if @riddle.persisted?
+            =link_to "#", :id=>"update_riddle", "data-update-url" => url_for(@riddle), :class=> "white small radius button" do
+              %i.icon-edit.icon-large
+              Update
+          -else
+            =link_to "#", :id=>"save_riddle", :class=> "white small radius button" do
+              %i.icon-edit.icon-large
+              Save
         %li
           =link_to "#", :id=>"fork_riddle", "data-reveal-id" => "coming-soon",:class=> "white small radius button" do
             %i.icon-share.icon-large
@@ -15,12 +20,4 @@
       =render partial: "form"
 
     .seven.columns
-      -if @riddle_result.present?
-        .panel
-          %h5 Output
-          %code
-            =simple_format @riddle_result.output if @riddle_result.output.present?
-            %br
-            =" => #{@riddle_result.result}" if @riddle_result.result.present?
-            %br
-            =simple_format @riddle_result.exception
+      #riddle_result

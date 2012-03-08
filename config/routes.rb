@@ -1,6 +1,12 @@
 Rubyfiddle::Application.routes.draw do
   root to: "riddles#index"
-  resources :riddles
+  resources :riddles do
+    member do
+      post :fork
+    end
+  end
+  match 'riddles/:id/:version' => 'riddles#show', :as => :versioned_riddle, :constraints => { :version=> /\d*/}
+  match 'plays/run' => "plays#run", as: :play
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -7,6 +7,7 @@ gem "haml-rails"
 gem 'sqlite3'
 gem 'jquery-rails'
 gem "compass-rails", ">=0.12"
+gem "paper_trail", '~> 2'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

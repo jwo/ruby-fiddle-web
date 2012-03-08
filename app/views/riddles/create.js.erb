@@ -1,0 +1,6 @@
+<% if @riddle.errors.any? %>
+  $("#riddle_form").html("<%= escape_javascript(render partial: "form") %>");
+  $("#riddle_form").parent().effect("highlight", {}, 3000);
+<% else %>
+  window.location.replace("<%= url_for(@riddle) %>");
+<% end %>

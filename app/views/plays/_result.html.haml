@@ -1,0 +1,9 @@
+-if @riddle_result.present?
+  .panel
+    %h5 Output
+    %code
+      =simple_format @riddle_result.output if @riddle_result.output.present?
+      %br
+      =" => #{@riddle_result.result}" if @riddle_result.result.present?
+      %br
+      =simple_format @riddle_result.exception
