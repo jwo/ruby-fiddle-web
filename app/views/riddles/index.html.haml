@@ -12,7 +12,7 @@
               %i.icon-edit.icon-large
               Save
         %li
-          =link_to "#", :id=>"fork_riddle", "data-reveal-id" => "coming-soon",:class=> "white small radius button" do
+          =link_to "#", :id=>"fork_riddle", "data-fork-url" => url_for([:fork, @riddle]), :class=> "white small radius button" do
             %i.icon-share.icon-large
             Fork
   .row

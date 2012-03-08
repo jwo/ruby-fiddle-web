@@ -1,6 +1,7 @@
 class RiddlesController < ApplicationController
   respond_to :html, :js
   rescue_from ActionController::RoutingError, with: :not_found
+
   def index
     @riddle = Riddle.new
   end
@@ -16,6 +17,10 @@ class RiddlesController < ApplicationController
     respond_with @riddle, :notice=>"Riddle updated"
   end
 
+  def fork
+    @riddle = Riddle.find(params[:id]).fork!
+    respond_with @riddle, :notice=>"Riddle forked!"
+  end
 
   def show
     @riddle = get_version_of_riddle(Riddle.find(params[:id]), params.fetch(:version, 1))
