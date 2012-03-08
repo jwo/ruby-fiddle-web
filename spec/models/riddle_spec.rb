@@ -14,4 +14,18 @@ describe Riddle do
       existing_riddle.fork!.code.should eq(code)
     end
   end
+
+  context "generate tokens" do
+    it "should generate a token on create" do
+      riddle = Riddle.create(code: "1+2")
+      riddle.public_token.should be_present
+    end
+  end
+
+  context "#to_params" do
+    it "should use the public token for to_param" do
+      subject.stub(:public_token) { "551ab"}
+      subject.to_param.should eq("551ab")
+    end
+  end
 end

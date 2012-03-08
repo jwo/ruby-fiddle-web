@@ -12,18 +12,18 @@ class RiddlesController < ApplicationController
   end
 
   def update
-    @riddle = Riddle.find(params[:id])
+    @riddle = Riddle.for_token(params[:id])
     @riddle.update_attributes(params[:riddle].slice(:code))
     respond_with @riddle, :notice=>"Riddle updated"
   end
 
   def fork
-    @riddle = Riddle.find(params[:id]).fork!
+    @riddle = Riddle.for_token(params[:id]).fork!
     respond_with @riddle, :notice=>"Riddle forked!"
   end
 
   def show
-    @riddle = get_version_of_riddle(Riddle.find(params[:id]), params.fetch(:version, 1))
+    @riddle = get_version_of_riddle(Riddle.for_token(params[:id]), params.fetch(:version, 1))
     if @riddle.nil?
       not_found
     else

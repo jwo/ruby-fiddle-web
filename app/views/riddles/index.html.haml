@@ -2,19 +2,20 @@
   .row
     .five.columns
       %ul.block-grid.three-up
-        %li
-          -if @riddle.persisted?
+        -if @riddle.persisted?
+          %li
             =link_to "#", :id=>"update_riddle", "data-update-url" => url_for(@riddle), :class=> "white small radius button" do
               %i.icon-edit.icon-large
               Update
-          -else
+            %li
+              =link_to "#", :id=>"fork_riddle", "data-fork-url" => url_for([:fork, @riddle]), :class=> "white small radius button" do
+                %i.icon-share.icon-large
+                Fork
+        -else
+          %li
             =link_to "#", :id=>"save_riddle", :class=> "white small radius button" do
               %i.icon-edit.icon-large
               Save
-        %li
-          =link_to "#", :id=>"fork_riddle", "data-fork-url" => url_for([:fork, @riddle]), :class=> "white small radius button" do
-            %i.icon-share.icon-large
-            Fork
   .row
     .five.columns
       =render partial: "form"
