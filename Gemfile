@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem "compass-rails", ">=0.12"
 gem "paper_trail", '~> 2'
 gem "has_tokens", "1.0.1"
+gem "airbrake"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
