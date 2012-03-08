@@ -12,13 +12,12 @@
             Fork
   .row
     .five.columns
-      %h2 Console
       =render partial: "form"
 
     .seven.columns
-      %h2 Output
-      .panel
-        -if @riddle_result.present?
+      -if @riddle_result.present?
+        .panel
+          %h5 Output
           %code
             =simple_format @riddle_result.output if @riddle_result.output.present?
             %br

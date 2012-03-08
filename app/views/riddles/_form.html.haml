@@ -1,3 +1,3 @@
 =simple_form_for(@riddle) do |f|
-  =f.input :code, :as => :text, label: false
+  =f.input :code, :as => :text, label: false, placeholder: "Step Only: Enter your ruby here"
   =f.submit "Run Ruby Fiddle", :class=>"nice large button"
