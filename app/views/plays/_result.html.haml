@@ -1,3 +1,8 @@
+-if @execution_exception.present?
+  .panel
+    %h5 Umm.. You broke it? [or maybe it's broken]
+    .alert-box It'd totally help if you would click feedback and let me know the code you ran to break it.
+    %p Thanks for trying out RubyFiddle
 -if @riddle_result.present?
   .panel
     %h5 Output
@@ -6,4 +11,4 @@
       %br
       =" => #{@riddle_result.result}" if @riddle_result.result.present?
       %br
-      =simple_format @riddle_result.exception
+      =simple_format @riddle_result.error_text
