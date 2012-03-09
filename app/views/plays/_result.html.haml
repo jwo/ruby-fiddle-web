@@ -5,10 +5,15 @@
     %p Thanks for trying out RubyFiddle
 -if @riddle_result.present?
   .panel
-    %h5 Output
+    %h6 Output
+    %hr
     %code
-      =simple_format @riddle_result.output if @riddle_result.output.present?
-      %br
-      =" => #{@riddle_result.result}" if @riddle_result.result.present?
-      %br
-      =simple_format @riddle_result.error_text
+      -if @riddle_result.output.present?
+        =simple_format @riddle_result.output 
+        %br
+      -if @riddle_result.exception.present?
+        EXCEPTION:
+        = simple_format @riddle_result.exception
+      -else 
+        =" => #{@riddle_result.result}" if @riddle_result.result.present?
+        %br
