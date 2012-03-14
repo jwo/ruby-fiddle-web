@@ -12,6 +12,8 @@
  *= require foundation
  *= require app
  *= require navbar
+ *= require codemirror
+ *= require rubyblue
  *= require font-awesome
 */
 

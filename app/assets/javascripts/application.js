@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require codemirror
+//= require ruby
 //= require_tree .
