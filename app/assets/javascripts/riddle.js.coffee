@@ -1,4 +1,12 @@
 $ ->
+  editor = CodeMirror.fromTextArea(document.getElementById("riddle_code"),
+     mode: "text/x-ruby",
+     tabMode: "indent",
+     matchBrackets: true,
+     indentUnit: 2,
+     lineNumbers: true,
+     theme: 'rubyblue'
+    )
 	$("#save_riddle").on "click", ->
 		$.ajax
 			type: 'POST',
