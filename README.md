@@ -10,14 +10,17 @@ TODO
 
 1. Exceptions return both output and exceptions, it seems
 2. Format the output CSS
-3. Line numbers
-4. When you press tab, have it insert 2 spaces
-5. Acceptance test the running of riddles
+3. Acceptance test the running of riddles
 
 Created by
 ---------
 
 Jesse Wolgamott, @jwo for the upcoming RubyOffRails project.
+
+Contributors
+------------
+
+* [Haris Amin](https://github.com/hamin)
 
 Updates
 ------
