@@ -15,4 +15,6 @@
 //= require foundation
 //= require codemirror
 //= require ruby
+//= require vim
+//= require emacs
 //= require_tree .
