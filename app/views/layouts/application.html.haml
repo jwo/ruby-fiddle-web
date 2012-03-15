@@ -15,6 +15,8 @@
     %title= content_for?(:title) ? yield(:title) : "Ruby Fiddle | Ruby Snippets in the Browser"
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
+    /[if lt IE 9]
+      %script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
     = csrf_meta_tags
   %body
     =render partial: "layouts/navbar"
