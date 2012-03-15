@@ -17,9 +17,17 @@
               %i.icon-edit.icon-large
               Save
         %li
+          =link_to "#", :id=> "create_gist", :class=> "white small radius button" do
+            %i.icon-github-sign.icon-large
+            Gistify
+        %br
+        %br
+        %br
+            
+        %li
           .segmented_control.left_section
-            / .white.small KeyBindings
             %i.icon-cogs.icon-large
+            Key Bindings
             %button#none.left_section.selected_binding{:type => 'button', :value => 'none'} none
             %button#vim.middle_section{:type => 'button', :value => 'vim'} vim
             %button#emacs.right_section{:type => 'button', :value => 'emacs'} emacs

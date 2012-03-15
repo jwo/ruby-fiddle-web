@@ -12,7 +12,35 @@ $ ->
     $("button.selected_binding").removeClass('selected_binding')
     editor.setOption('keyMap', $(this).val())
     $(this).addClass('selected_binding')
-    
+  
+  
+  $("#create_gist").on "click", ->
+    gistData = {
+          "public": true,
+          "files": {
+            "rubyfiddle_riddle.rb": {
+              "content": editor.getValue()
+            }
+          }
+        }
+  
+    $.ajax
+      type: 'POST',
+      url: "https://api.github.com/gists",
+      crossDomain: true,
+      username: '',
+      password: '',
+      data: gistData,
+      contentType: "application/json",
+      dataType: "jsonp",
+      success: (data)->
+        console.log "CAME TO SUCCESS"
+        console.log data
+
+      error: (data)->
+        console.log "CAME TO ERROR"
+        console.log data
+			
 	$("#save_riddle").on "click", ->
 		$.ajax
 			type: 'POST',
