@@ -7,6 +7,12 @@ $ ->
      lineNumbers: true,
      theme: 'rubyblue'
     )
+  
+  $(".segmented_control button").on "click", ->
+    $("button.selected_binding").removeClass('selected_binding')
+    editor.setOption('keyMap', $(this).val())
+    $(this).addClass('selected_binding')
+    
 	$("#save_riddle").on "click", ->
 		$.ajax
 			type: 'POST',
