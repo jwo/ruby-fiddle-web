@@ -1,4 +1,6 @@
 $ ->
+
+    
 	$("#save_riddle").on "click", ->
 		root.codeEditor.save()
 		$.ajax
@@ -29,3 +31,8 @@ $ ->
 		indentUnit: 2,
 		lineNumbers: true,
 		theme: 'rubyblue'
+
+	$(".segmented_control button").on "click", ->
+		$("button.selected_binding").removeClass('selected_binding')
+		root.codeEditor.setOption('keyMap', $(this).val())
+		$(this).addClass('selected_binding')

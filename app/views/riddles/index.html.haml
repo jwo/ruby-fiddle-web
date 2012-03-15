@@ -16,6 +16,14 @@
             =link_to "#", :id=>"save_riddle", :class=> "white small radius button" do
               %i.icon-edit.icon-large
               Save
+      %ul.block-grid.one-up.centered
+        %li
+          .segmented_control.left_section
+            / .white.small KeyBindings
+            %i.icon-cogs.icon-large
+            %button#none.left_section.selected_binding{:type => 'button', :value => 'default'} none
+            %button#vim.middle_section{:type => 'button', :value => 'vim'} vim
+            %button#emacs.right_section{:type => 'button', :value => 'emacs'} emacs
   .row
     .five.columns
       =render partial: "form"
