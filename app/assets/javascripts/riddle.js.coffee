@@ -15,30 +15,18 @@ $ ->
   
   
   $("#create_gist").on "click", ->
-    gistData = {
-          "public": true,
-          "files": {
-            "rubyfiddle_riddle.rb": {
-              "content": editor.getValue()
-            }
-          }
-        }
-  
+    gistData = {"gist_content": editor.getValue() }
     $.ajax
       type: 'POST',
-      url: "https://api.github.com/gists",
-      crossDomain: true,
-      username: '',
-      password: '',
-      data: gistData,
+      url: "/riddles/gistify",
+      data: JSON.stringify(gistData),
       contentType: "application/json",
-      dataType: "jsonp",
+      dataType: "json",
       success: (data)->
-        console.log "CAME TO SUCCESS"
         console.log data
+        window.open data.gist_url
 
       error: (data)->
-        console.log "CAME TO ERROR"
         console.log data
 			
 	$("#save_riddle").on "click", ->
