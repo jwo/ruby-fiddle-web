@@ -1,6 +1,6 @@
 class RiddlesController < ApplicationController
   respond_to :html, :js
-  rescue_from ActionController::RoutingError, with: :not_found
+  rescue_from ActionController::RoutingError, :with => :not_found
 
   def index
     @riddle = Riddle.new
@@ -29,6 +29,16 @@ class RiddlesController < ApplicationController
     else
       render :index
     end
+  end
+  
+  def gistify
+    gist = ActiveGist.new(:public => true, :description => "testing activegist", :files => {'ruby_fiddle.rb' =>{:content => params[:gist_content] }})
+    
+    if gist.save
+      render :json => {:gist_url => gist.html_url}, :status => :ok
+    else
+      render :json => {:error => "Unable to create"}, :status => :error
+    end  
   end
 
   def not_found

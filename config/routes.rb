@@ -1,6 +1,9 @@
 Rubyfiddle::Application.routes.draw do
   root to: "riddles#index"
   resources :riddles do
+    collection do
+      post :gistify
+    end
     member do
       put :fork
     end

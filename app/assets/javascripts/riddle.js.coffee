@@ -1,27 +1,46 @@
 $ ->
-
-    
-	$("#save_riddle").on "click", ->
+	$("#save_riddle").on "click", (event) ->
+		$(this).text("saving....")
+		event.preventDefault()
 		root.codeEditor.save()
 		$.ajax
 			type: 'POST',
 			url: "/riddles/",
 			data: $("#riddle_form").serialize(),
 			dataType: "script"
-	$("#update_riddle").on "click", ->
+	$("#update_riddle").on "click", (event)  ->
+		$(this).text("updating....")
+		event.preventDefault()
 		root.codeEditor.save()
 		$.ajax
 			type: 'PUT',
 			url: $(this).data("update-url"),
 			data: $("#riddle_form").serialize(),
 			dataType: "script"
-	$("#fork_riddle").on "click", ->
+	$("#fork_riddle").on "click", (event)  ->
+		$(this).text("forking....")
+		event.preventDefault()
 		root.codeEditor.save()
 		$.ajax
 			type: 'PUT',
 			url: $(this).data("fork-url"),
 			data: $("#riddle_form").serialize(),
 			dataType: "script"
+	$("#create_gist").on "click", (event)  ->
+		$(this).text("gistifying....")
+		event.preventDefault()
+		gistData = {"gist_content": root.codeEditor.getValue() }
+		$.ajax
+			type: 'POST',
+			url: "/riddles/gistify",
+			data: JSON.stringify(gistData),
+			contentType: "application/json",
+			dataType: "json",
+			success: (data)->
+				console.log data
+				window.open data.gist_url
+			error: (data)->
+				console.log data
 
 	root = exports ? this
 	root.codeEditor = CodeMirror.fromTextArea document.getElementById("riddle_code"),
