@@ -35,5 +35,5 @@ Rubyfiddle::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  config.ruby_fiddle_exec_url = "http://ruby-fiddle-exec.heroku.com"
+  config.ruby_fiddle_exec_url = "http://ruby-fiddle-cedar.herokuapp.com"
 end
