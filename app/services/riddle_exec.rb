@@ -10,6 +10,7 @@ class RiddleExec
     begin
       transform_to_hash(httpize(code))
     rescue => exc
+      Rails.logger.error exc.inspect
       raise RiddleExecutionError.new exc 
     end
   end

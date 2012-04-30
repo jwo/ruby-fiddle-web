@@ -12,7 +12,6 @@ class PlaysController < ApplicationController
   protected
     def error_riddle_result(exception)
       @execution_exception = exception
-      Rails.logger.error exception.inspect
       render :run
     end
 end
