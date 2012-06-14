@@ -2,9 +2,9 @@
   %h2 Sample Riddles
   %p.lead Have more? Send them along!
   %ul.block-grid.three-up
-    %li=link_to "Add method to String", "http://rubyfiddle.com/riddles/50c9b", class: :button
+    %li=link_to "Add method to String", "http://rubyfiddle.com/riddles/50c9b/2", class: :button
     %li=link_to "instance variable get", "http://rubyfiddle.com/riddles/c07a2", class: :button
-    %li=link_to "Using Yield to log \"stuff\"", "http://rubyfiddle.com/riddles/10504/2", class: :button
+    %li=link_to "Using Yield to log \"stuff\"", "http://rubyfiddle.com/riddles/10504/9", class: :button
   %a.close-reveal-modal &#215;
 
 #about.reveal-modal
@@ -23,8 +23,7 @@
 #security.reveal-modal
   %h2 Security Concerns?
   %p They say being pwned is a right of passage for an app. RubyFiddle grew up a little bit on June 14, 2012. 
-  %p We execute in a restricted environment on Heroku, but system calls would still cause problems in ways I didn't anticipate.
-  %p I've disabled shell execution and forking. If you do find something, be awesome and bsubmit a github issue with the code that causes the pwnage.
+  %p We execute in a restricted environment on Heroku, but system calls and even ruby classes would still cause problems in ways I didn't anticipate. 
   %ul.block-grid.three-up
     %li=link_to "Delete all files", "http://rubyfiddle.com/riddles/0a805", class: :button
     %li=link_to "while { fork }", "http://rubyfiddle.com/riddles/0a805/7", class: :button
