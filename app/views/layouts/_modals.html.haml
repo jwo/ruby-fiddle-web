@@ -22,10 +22,11 @@
 
 #security.reveal-modal
   %h2 Security Concerns?
-  %p.lead Read Only File System
-  %p I've had people contact me about being able to run arbitrary code, and are concerned. Don't be! It's a feature!
-  %p The code is executed on Heroku read only file system, with no database access. So you can't do anything bad. Try it out!
-  %ul.block-grid.two-up
+  %p They say being pwned is a right of passage for an app. RubyFiddle grew up a little bit on June 14, 2012. 
+  %p We execute in a restricted environment on Heroku, but system calls would still cause problems in ways I didn't anticipate.
+  %p I've disabled shell execution and forking. If you do find something, be awesome and bsubmit a github issue with the code that causes the pwnage.
+  %ul.block-grid.three-up
     %li=link_to "Delete all files", "http://rubyfiddle.com/riddles/0a805", class: :button
+    %li=link_to "while { fork }", "http://rubyfiddle.com/riddles/0a805/7", class: :button
     %li=link_to "Read the /etc/passwd", "http://rubyfiddle.com/riddles/0a805/2", class: :button
   %a.close-reveal-modal &#215;
