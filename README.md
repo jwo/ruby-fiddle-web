@@ -5,17 +5,19 @@ Ability to create ruby snippets, run them, fork them, share them, eat them.
 
 You can see on the web at http://rubyfiddle.com
 
+Execution takes place in a separate service to remove access to the database: https://github.com/jwo/ruby-fiddle-exec
+
 TODO
 ----
 
-1. Exceptions return both output and exceptions, it seems
-2. Format the output CSS
-3. Acceptance test the running of riddles
+1. Made the editor wide and results beneath
+2. Allow inclusion of gems like ActiveSupport, RSpec
+3. Widget to allow embedding
 
 Created by
 ---------
 
-Jesse Wolgamott, @jwo for the upcoming RubyOffRails project.
+Jesse Wolgamott, @jwo for http://rubyoffrails.com.
 
 Contributors
 ------------
