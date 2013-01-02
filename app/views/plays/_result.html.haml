@@ -8,12 +8,11 @@
     %h6 Output
     %hr
     %code
-      -if @riddle_result.output.present?
-        =simple_format @riddle_result.output 
+      -@riddle_result.output.each do |output|
+        =output
+        %br
+      -if @riddle_result.result.present?
+        =" => #{@riddle_result.result}"
         %br
       -if @riddle_result.exception.present?
-        EXCEPTION:
         = simple_format @riddle_result.exception
-      -else 
-        =" => #{@riddle_result.result}" if @riddle_result.result.present?
-        %br
