@@ -11,7 +11,7 @@ gem "paper_trail", '~> 2'
 gem "has_tokens", "1.0.1"
 gem "airbrake"
 gem "activegist"
-gem "unicorn"
+gem "puma"
 
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
