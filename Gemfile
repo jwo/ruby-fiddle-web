@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.11'
 gem "zurb-foundation"
 gem "simple_form", :git => "git://github.com/jwo/simple_form.git", :branch=>"zurb_integration"
 gem "haml-rails"
