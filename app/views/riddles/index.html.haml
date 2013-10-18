@@ -1,42 +1,7 @@
 .container.riddle
   .row
     .six.columns
-      %ul.block-grid.three-up
-        -if @riddle.persisted?
-          %li
-            =link_to "#", :id=>"update_riddle", "data-update-url" => url_for(@riddle), title: "Save a new version", :class=> "has-tip white small radius button" do
-              %i.icon-edit.icon-large
-              Update
-            %li
-              =link_to "#", :id=>"fork_riddle", "data-fork-url" => url_for([:fork, @riddle]), title: "Fork your own version", :class=> "has-tip white small radius button" do
-                %i.icon-share.icon-large
-                Fork
-        -else
-          %li
-            =link_to "#", :id=>"save_riddle", :class=> "white small radius button" do
-              %i.icon-edit.icon-large
-              Save
-        %li
-          =link_to "#", :id=> "create_gist", title: "Create a public github gist", :class=> "has-tip white small radius button" do
-            %i.icon-github-sign.icon-large
-            Gistify
-    .six.columns
-      %ul.block-grid.one-up.centered
-        %li
-          .segmented_control.left_section
-            %i.icon-cogs.icon-large
-            Key Bindings
-            %button#none.left_section.selected_binding{:type => 'button', :value => 'none'} None
-            %button#vim.middle_section.has-tip{:type => 'button', :value => 'vim', title: "Most vim bindings (i, esc, dw)"} Vim
-            %button#emacs.right_section.has-tip{:type => 'button', :value => 'emacs', title: "Most emacs bindings"} Emacs
-  .row
-    .six.columns
-      .alert-box.alert-info
-        Currently Upgrading to JRuby. You may expect a bit of turbulence!
       =render partial: "form"
-      %a{:href=>"https://twitter.com/share", :class=>"twitter-share-button", :"data-via"=>"twitterapi", :"data-lang"=>"en"}Tweet
-      :javascript
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
     .six.columns
       #riddle_result

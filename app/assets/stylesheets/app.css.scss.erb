@@ -3,6 +3,16 @@
 body {
   background: url("<%= asset_path('furley_bg.png') %>");
   font-family: 'Ubuntu', sans-serif;
+  
+  .container {
+      padding: 0px;
+  }
+}
+
+.riddle .row .six {
+  margin: 0;
+  width: 50%;
+
 }
 
 .riddle {
@@ -11,6 +21,13 @@ body {
     font-family: "PT Mono", "courier", fixed;
     height: 400px;
   }
+.row {
+  width: 100%;
+  max-width: inherit;
+  min-width: inherit;
+  margin: 0 auto;
+}
+
   .alert-box {
     font-family: Arial, sans-serif;
   }
