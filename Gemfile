@@ -13,7 +13,6 @@ gem "airbrake"
 gem "activegist"
 gem "puma"
 gem "pg"
-gem "dotenv-rails"
 
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
@@ -23,8 +22,12 @@ group :assets do
   gem 'therubyracer'
 end
 
-group :test do
+group :development, :test do
+  gem "dotenv-rails"
   gem "rspec-rails", ">= 2.9.0"
+end
+
+group :test do
   gem "shoulda-matchers"
   gem "vcr"
   gem "fakeweb"
