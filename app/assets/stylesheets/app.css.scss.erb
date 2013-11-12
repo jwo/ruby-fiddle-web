@@ -7,20 +7,58 @@ body {
   .container {
       padding: 0px;
   }
+  .riddle .row .five {
+    width: 42.5%;
+    margin-left: 1%;
+  }
 }
 
 .riddle .row .six {
   margin: 0;
-  width: 50%;
+  width: 48.323%;
+  padding: 12px;
+  padding-bottom: 0;
+}
 
+.riddle .row .six .div:last-child {
+  margin: 0;
+  width: 50%;
+}
+
+#info-panel {
+  background-color: white;
+  height: 100%;
+}
+
+.execute {
+  position: absolute;
+  z-index: 100;
+  border: 1px solid black;
+  border-radius: 4px;
+  right: 0;
+}
+
+#riddle_result {
+  padding: 11px;
+  position: absolute;
+  top: 50em;
+  right: 43.5em;
+  left: 0;
+  bottom: 0;
+
+  .panel {
+    padding: 20px 0px 2px 20px;
+  }
 }
 
 .riddle {
   font-family: "Monaco", "Ubuntu", sans-serif;
-  textarea, code{
+
+  textarea, code {
     font-family: "PT Mono", "courier", fixed;
     height: 400px;
   }
+
 .row {
   width: 100%;
   max-width: inherit;
@@ -39,12 +77,11 @@ body {
     color: #ffffff;
     border: 2px solid #ccc;
   }
-  input, textarea, small{
-    width: 100%;
-  }
+
   small {
     margin-top: 1em;
   }
+
   .code.button {
     background: #112435 url(<%=asset_path("foundation/misc/button-gloss.png") %>) repeat-x 0 -31px;
     border: 0;
@@ -54,6 +91,7 @@ body {
 
 footer {
   margin-top: 60px;
+
   .row{
     padding-top: 3em;
     border-top: 1px solid #ccc;

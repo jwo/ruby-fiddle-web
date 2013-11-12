@@ -7,13 +7,13 @@
         for
         =link_to "rubyoffrails", "http://rubyoffrails.com"
     .four.columns
+      .social
+        %a{:href=>"https://twitter.com/share", :class=>"icon-twitter-sign icon-large twitter-share-button", :"data-via"=>"twitterapi", :"data-lang"=>"en"}
+        %a{:href=>"https://github.com/jwo/ruby-fiddle-web", :class=> "icon-github-sign icon-large"}
       .centered
         Inspired by 
         =link_to "JSFiddle", "http://jsfiddle.net"
-    .four.columns
-      .centered
-        =link_to "https://github.com/jwo/ruby-fiddle-web", :class=> "white large radius button" do
-          %i.icon-github-sign.icon-large
-          Yes, On Github
+
+
 =render partial: "layouts/modals"
 =render partial: "layouts/gauges"
