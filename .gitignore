@@ -18,3 +18,4 @@ pickle-email-*.html
 *.rvmrc
 *.swo
 .DS_Store
+.env

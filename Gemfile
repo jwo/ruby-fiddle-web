@@ -13,6 +13,7 @@ gem "airbrake"
 gem "activegist"
 gem "puma"
 gem "pg"
+gem "dotenv-rails"
 
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
