@@ -30,3 +30,15 @@
     %li=link_to "Read the /etc/passwd", "http://rubyfiddle.com/riddles/0a805/2", class: :button
   %p Due to such security concerns, we had to disable things like #{link_to "re-opening a class (String)", "http://rubyfiddle.com/riddles/50c9b/2"}
   %a.close-reveal-modal &#215;
+
+#preferences.reveal-modal
+  %h2 Preferences
+  .six.columns
+  %ul.block-grid.one-up.centered
+    %li
+      .segmented_control.left_section
+        %i.icon-cogs.icon-large
+        Key Bindings
+        %button#none.left_section.selected_binding{:type => 'button', :value => 'none'} None
+        %button#vim.middle_section.has-tip{:type => 'button', :value => 'vim', title: "Most vim bindings (i, esc, dw)"} Vim
+        %button#emacs.right_section.has-tip{:type => 'button', :value => 'emacs', title: "Most emacs bindings"} Emacs
