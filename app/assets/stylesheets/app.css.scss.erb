@@ -1,22 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 @import url(http://fonts.googleapis.com/css?family=PT%20Mono);
+
+$furleyBackground: url("<%= asset_path('furley_bg.png') %>");
+
+
 body {
-  background: url("<%= asset_path('furley_bg.png') %>");
+  background: $furleyBackground;
   font-family: 'Ubuntu', sans-serif;
   
   .container {
       padding: 0px;
   }
-  .riddle .row .five {
-    width: 40.8%;
-    margin-left: 1%;
-    border-left: 3px solid #841b2d;
-  
-  }
 
-  .riddle .row .seven {
-    margin: 6px 0 0 6px;
-  }
 }
 
 .riddle .row .six {
@@ -32,13 +27,13 @@ body {
 }
 
 #info-panel {
-  background-color: white;
+  background: white;
   height: 100%;
 }
 
 .execute {
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   border: 1px solid black;
   border-radius: 4px;
   right: 0;
@@ -74,6 +69,12 @@ body {
 
   .alert-box {
     font-family: Arial, sans-serif;
+  }
+}
+
+.button-content {
+  input {
+    font-size: 13px;
   }
 }
 

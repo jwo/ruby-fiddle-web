@@ -33,12 +33,15 @@
 
 #preferences.reveal-modal
   %h2 Preferences
+  .alert-box.alert-info
+    Currently Upgrading to JRuby. You may expect a bit of turbulence!
+
   .six.columns
   %ul.block-grid.one-up.centered
     %li
       .segmented_control.left_section
-        %i.icon-cogs.icon-large
-        Key Bindings
+        %h4 Key Bindings
+        %i.icon-cogs.icon-large 
         %button#none.left_section.selected_binding{:type => 'button', :value => 'none'} None
         %button#vim.middle_section.has-tip{:type => 'button', :value => 'vim', title: "Most vim bindings (i, esc, dw)"} Vim
         %button#emacs.right_section.has-tip{:type => 'button', :value => 'emacs', title: "Most emacs bindings"} Emacs

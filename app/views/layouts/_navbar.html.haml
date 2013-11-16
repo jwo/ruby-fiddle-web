@@ -10,3 +10,7 @@
         %li=link_to "Fork", "#", "data-reveal-id" => :fork
         %li=link_to "About", "#", "data-reveal-id" => :about
         %li=link_to "Preferences", "#", "data-reveal-id" => :preferences
+
+        %a{:href=>"https://twitter.com/share", :class=>"icon-twitter-sign icon-large twitter-share-button", :"data-via"=>"twitterapi", :"data-lang"=>"en"}
+      :javascript
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
