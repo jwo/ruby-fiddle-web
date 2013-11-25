@@ -5,7 +5,7 @@ Ability to create ruby snippets, run them, fork them, share them, eat them.
 
 You can see on the web at http://rubyfiddle.com
 
-Execution takes place in a separate service to remove access to the database: https://github.com/jwo/ruby-fiddle-exec
+Execution takes place in a separate service, under JRuby, to remove access to the database: https://github.com/jwo/ruby-fiddle-exec
 
 TODO
 ----
