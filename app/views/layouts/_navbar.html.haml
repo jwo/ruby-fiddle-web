@@ -1,10 +1,10 @@
 #navBar.container
   .row
-    .twelve.columns
+    .medium-12.columns
       .title 
         =link_to root_path do
           RubyFiddle
-      %ul.nav-bar.hide-on-phones.nav
+      %ul.nav-bar.hide-on-phones.nav.inline-list
         %li=link_to "Sample Riddles", "#", "data-reveal-id" => :sample_riddles
         %li=link_to "Security", "#", "data-reveal-id" => :security
         %li=link_to "Fork", "#", "data-reveal-id" => :fork
