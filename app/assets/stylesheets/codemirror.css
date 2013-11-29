@@ -10,7 +10,6 @@
      is visible outside of the scrolling box. */
   position: relative;
   border: 1px solid black;
-  border-radius: 7px;
 }
 
 .CodeMirror-gutter {

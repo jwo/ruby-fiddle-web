@@ -3,7 +3,6 @@
 
 $furleyBackground: url("<%= asset_path('furley_bg.png') %>");
 
-
 body {
   background: $furleyBackground;
   font-family: 'Ubuntu', sans-serif;
@@ -24,23 +23,21 @@ body {
 
 #control-panel {
   height: 4%;
-  background-color: gray;
+  background-color: darkred;
+
+  .panel-list {
+    text-align: center;
+  }
 
   li {
     display: inline;
+  
+    a {
+      background: darkred;
+      padding-top: 17px;
+    }
+
   }
-}
-
-.riddle .row .six {
-  margin: 0;
-  width: 48.323%;
-  padding: 12px;
-  padding-bottom: 0;
-}
-
-.riddle .row .six .div:last-child {
-  margin: 0;
-  width: 50%;
 }
 
 #info-panel {
@@ -58,12 +55,10 @@ body {
 }
 
 #riddle_result {
-  padding: 11px;
-  position: absolute;
-  top: 0em;
-  right: 0em;
-  left: 0;
-  bottom: 0;
+  .riddle-panel {
+    margin-top: 10px;
+    padding: 6px;
+  }
 
 }
 
@@ -80,6 +75,19 @@ body {
   max-width: inherit;
   min-width: inherit;
   margin: 0 auto;
+
+  .six {
+    margin: 0;
+    width: 48.323%;
+    padding: 12px;
+    padding-bottom: 0;
+
+  .div:last-child {
+    margin: 0;
+    width: 50%;
+  }
+
+  }
 }
 
   .alert-box {
@@ -205,6 +213,8 @@ footer {
 }
 
 .has-tip {
+  border-bottom: 0;
   cursor: pointer;
+  color: white;
 }
 
