@@ -8,10 +8,27 @@ body {
   background: $furleyBackground;
   font-family: 'Ubuntu', sans-serif;
   
-  .container {
-      padding: 0px;
-  }
+  .container { 
+    padding: 0px;
 
+      .small-5 { 
+        padding-left: 0; 
+        padding-right: 0;
+      }
+      .small-7 { 
+        padding-left: 0; 
+        padding-right: 0;
+      }
+  }
+}
+
+#control-panel {
+  height: 4%;
+  background-color: gray;
+
+  li {
+    display: inline;
+  }
 }
 
 .riddle .row .six {
@@ -29,6 +46,7 @@ body {
 #info-panel {
   background: white;
   height: 100%;
+  border: 3px solid #9b111e;
 }
 
 .execute {
@@ -42,14 +60,11 @@ body {
 #riddle_result {
   padding: 11px;
   position: absolute;
-  top: 50em;
-  right: 49.1em;
+  top: 0em;
+  right: 0em;
   left: 0;
   bottom: 0;
 
-  .panel {
-    padding: 20px 0px 2px 20px;
-  }
 }
 
 .riddle {

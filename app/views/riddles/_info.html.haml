@@ -1,20 +1,21 @@
-%ul.block-grid.three-up
-  -if @riddle.persisted?
-    %li
-      =link_to "#", :id=>"update_riddle", "data-update-url" => url_for(@riddle), title: "Save a new version", :class=> "has-tip white small radius button" do
-        %i.icon-edit.icon-large
-        Update
+#control-panel
+  %ul.panel-list
+    -if @riddle.persisted?
       %li
-        =link_to "#", :id=>"fork_riddle", "data-fork-url" => url_for([:fork, @riddle]), title: "Fork your own version", :class=> "has-tip white small radius button" do
-          %i.icon-share.icon-large
-          Fork
-  -else
+        =link_to "#", :id=>"update_riddle", "data-update-url" => url_for(@riddle), title: "Save a new version", :class=> "has-tip white tiny radius button" do
+          %i.icon-edit.icon-large
+          Update
+        %li
+          =link_to "#", :id=>"fork_riddle", "data-fork-url" => url_for([:fork, @riddle]), title: "Fork your own version", :class=> "has-tip white tiny radius button" do
+            %i.icon-share.icon-large
+            Fork
+    -else
+      %li
+        =link_to "#", :id=>"save_riddle", :class=> "success tiny radius button" do
+          %i.icon-edit.icon-large
+          Save
     %li
-      =link_to "#", :id=>"save_riddle", :class=> "white small radius button" do
-        %i.icon-edit.icon-large
-        Save
-  %li
-    =link_to "#", :id=> "create_gist", title: "Create a public github gist", :class=> "has-tip white small radius button" do
-      %i.icon-github-sign.icon-large
-      Gistify
+      =link_to "#", :id=> "create_gist", title: "Create a public github gist", :class=> "has-tip white tiny radius button" do
+        %i.icon-github-sign.icon-large
+        Gistify
 
