@@ -1,7 +1,7 @@
 .content-bar
   =simple_form_for(@riddle, url: play_path, :remote => true, :method => :post, disable_with: "Running That Ruby!", :html=>{:id=>"riddle_form"}) do |f|
     .button-content
-      =f.submit "Run Ruby Fiddle", :class=>"tiny execute button"
+      =f.submit "Run Ruby Fiddle", :class=>"execute button"
       =f.input :code, :as => :text, label: false, placeholder: "Step Only: Enter your ruby here", input_html: {id: "riddle_code"}
   %br
 

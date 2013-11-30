@@ -22,10 +22,13 @@ body {
 }
 
 #control-panel {
-  height: 4%;
+  width: 100%;
+  position: absolute;
+  height: auto;
   background-color: darkred;
 
   .panel-list {
+    margin-bottom: 0;
     text-align: center;
   }
 
@@ -34,7 +37,9 @@ body {
   
     a {
       background: darkred;
-      padding-top: 17px;
+      top: 13px;
+      font-size: 15px;
+
     }
 
   }
@@ -42,6 +47,7 @@ body {
 
 #info-panel {
   background: white;
+  margin-top: 58px;
   height: 100%;
   border: 3px solid #9b111e;
 }
@@ -97,7 +103,14 @@ body {
 
 .button-content {
   input {
-    font-size: 13px;
+    font-size: 19px;
+    border-bottom-left-radius: 16;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: darkred;
+    border: 0;
+    padding-bottom: 20px;
   }
 }
 
@@ -210,11 +223,5 @@ footer {
       -moz-box-shadow: inset 0 1px 4px #000;
       box-shadow: inset 0 1px 4px #000;
     }
-}
-
-.has-tip {
-  border-bottom: 0;
-  cursor: pointer;
-  color: white;
 }
 
