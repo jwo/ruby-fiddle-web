@@ -21,33 +21,8 @@ body {
   }
 }
 
-#control-panel {
-  width: 100%;
-  position: absolute;
-  height: auto;
-  background-color: darkred;
-
-  .panel-list {
-    margin-bottom: 0;
-    text-align: center;
-  }
-
-  li {
-    display: inline;
-  
-    a {
-      background: darkred;
-      top: 13px;
-      font-size: 15px;
-
-    }
-
-  }
-}
-
 #info-panel {
   background: white;
-  margin-top: 58px;
   height: 100%;
   border: 3px solid #9b111e;
 }
@@ -103,15 +78,68 @@ body {
 
 .button-content {
   input {
-    font-size: 17px;
+    font-size: 16px;
     border-bottom-left-radius: 16;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background: darkred;
+    background: #112435;
     border: 0;
-    padding-bottom: 20px;
+    text-align: center;
+    margin-right: 261px;
+    padding-bottom: 11px;
+    padding-top: 10px;
+    border: 3px solid darkred;
+    top: -3;
   }
+
+  ul {
+    margin-bottom: 0;
+    text-align: center;
+    position: absolute;
+    z-index: 100;
+    right: 15;
+
+    li {
+      display: inline;
+
+      #save_riddle {
+        font-size: 15px;
+        border: 3px solid darkred;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: inherit;
+        background: #112435;
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 11px;
+        margin-right: -13px;
+        padding-bottom: 10;
+        top: -3;
+      }
+
+      #create_gist {
+        border: 3px solid darkred;
+        font-size: 15px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 16;
+        background: #112435;
+        text-align: center;
+        color: white;
+        margin-top: 0;
+        padding-top: 11px;
+        margin-right: -6px;
+        padding-bottom: 10;
+        bottom: 0px;
+        top: -3;
+        }
+      }
+
+    }
+
 }
 
 #riddle_form{
