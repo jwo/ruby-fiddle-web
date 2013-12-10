@@ -27,7 +27,7 @@
   white-space: pre !important;
 }
 .CodeMirror-lines {
-  padding: .4em;
+  padding: .2em;
   font-size: 20px;
 }
 
@@ -42,6 +42,7 @@
   padding: 0; margin: 0;
   white-space: pre;
   word-wrap: normal;
+  padding-top: 3px;
 }
 
 .CodeMirror-wrap pre {
