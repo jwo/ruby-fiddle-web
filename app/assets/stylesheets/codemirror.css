@@ -28,6 +28,7 @@
 }
 .CodeMirror-lines {
   padding: .4em;
+  font-size: 20px;
 }
 
 .CodeMirror pre {
