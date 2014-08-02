@@ -28,7 +28,6 @@
 }
 .CodeMirror-lines {
   padding: .2em;
-  font-size: 20px;
 }
 
 .CodeMirror pre {
@@ -42,7 +41,6 @@
   padding: 0; margin: 0;
   white-space: pre;
   word-wrap: normal;
-  padding-top: 3px;
 }
 
 .CodeMirror-wrap pre {
