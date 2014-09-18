@@ -3,6 +3,19 @@
 
 $furleyBackground: url("<%= asset_path('furley_bg.png') %>");
 
+//overriding crucial dom elements... TODO: specificity
+p {
+  font-family: 'Nunito', Helvetica, arial, sans-serif;
+  font-size: 19px;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Nunito', Helvetica, arial, sans-serif;
+}
+
 body {
   background: $furleyBackground;
   font-family: 'Ubuntu', sans-serif;
@@ -21,10 +34,16 @@ body {
   }
 }
 
+.content-bar {
+  height: 100%
+}
+
 #info-panel {
   background: white;
   height: 100%;
   border: 3px solid #9b111e;
+  padding: 14px 29px 0 17px;
+  border-top: 1px solid #9b111e;
 }
 
 .execute {
