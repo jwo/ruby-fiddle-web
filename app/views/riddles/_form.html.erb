@@ -1,0 +1,33 @@
+
+<%= simple_form_for(@riddle, url: play_path, :remote => true, :method => :post, disable_with: "Running That Ruby!", :html=>{:id=>"riddle_form"}) do |f| %>
+<div class="icon-bar three-up">
+  <%= link_to "#", id: "run_riddle" do %>
+    <%= image_tag 'icon_1541.svg'   %>
+    <label>Run</label>
+  <% end %>
+
+  <% if @riddle.new_record? %>
+    <%= link_to "#", id: "save_riddle" do %>
+      <%= image_tag 'icon_14215.svg' %>
+      <label>Save</label>
+    <% end %>
+
+  <% else %>
+
+    <%= link_to "#", :id=>"update_riddle", "data-update-url" => url_for(@riddle), title: "Save a new version", :class=> "item" do %>
+      <%= image_tag 'icon_15866.svg' %>
+      <label>Bookmark</label>
+    <% end %>
+
+    <%=link_to "#", :id=>"fork_riddle", "data-fork-url" => url_for([:fork, @riddle]), title: "Fork your own version", :class=> "item" do %>
+      <%= image_tag 'icon_15866.svg' %>
+      <label>Fork</label>
+    <% end %>
+
+  <% end %>
+</div>
+
+<%=f.input :code, :as => :text, label: false, placeholder: "Step Only: Enter your ruby here", input_html: {id: "riddle_code"} %>
+
+  
+<% end %>

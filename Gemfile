@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.15'
-gem "zurb-foundation"
+gem 'foundation-rails'
 gem "simple_form", :git => "git://github.com/jwo/simple_form.git", :branch=>"zurb_integration"
 gem "haml-rails"
 gem 'sqlite3'

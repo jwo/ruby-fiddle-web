@@ -1,14 +1,13 @@
 #navBar.container
   .row
-    .twelve.columns
-      %h1
+    .medium-12.columns
+      .title 
         =link_to root_path do
           RubyFiddle
-      %ul.nav-bar.hide-on-phones.nav
-        %li=link_to "Sample Riddles", "#", "data-reveal-id" => :sample_riddles
-        %li=link_to "About", "#", "data-reveal-id" => :about
-        %li=link_to "Fork?", "#", "data-reveal-id" => :fork
+      %ul.nav-bar.hide-on-phones.nav.inline-list
         %li=link_to "Security", "#", "data-reveal-id" => :security
-        %li=link_to "Ruby Off Rails", "http://rubyoffrails.com"
+        %li=link_to "Github", "#", "data-reveal-id" => :fork
 
-
+        %a{:href=>"https://twitter.com/share", :class=>"icon-twitter-sign icon-large twitter-share-button", :"data-via"=>"twitterapi", :"data-lang"=>"en"}
+      :javascript
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
