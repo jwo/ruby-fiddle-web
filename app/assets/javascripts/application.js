@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui-1.8.18.custom.min
 //= require foundation
 //= require codemirror
 //= require ruby
 //= require vim
 //= require emacs
 //= require riddle
+//= require svg

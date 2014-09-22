@@ -2,25 +2,25 @@
 <%= simple_form_for(@riddle, url: play_path, :remote => true, :method => :post, disable_with: "Running That Ruby!", :html=>{:id=>"riddle_form"}) do |f| %>
 <div class="icon-bar three-up">
   <%= link_to "#", id: "run_riddle" do %>
-    <%= image_tag 'icon_1541.svg'   %>
+    <%= embedded_svg 'icon_1541.svg', class: "tool"%>
     <label>Run</label>
   <% end %>
 
   <% if @riddle.new_record? %>
     <%= link_to "#", id: "save_riddle" do %>
-      <%= image_tag 'icon_14215.svg' %>
+      <%= embedded_svg 'icon_14215.svg', class: "tool" %>
       <label>Save</label>
     <% end %>
 
   <% else %>
 
     <%= link_to "#", :id=>"update_riddle", "data-update-url" => url_for(@riddle), title: "Save a new version", :class=> "item" do %>
-      <%= image_tag 'icon_15866.svg' %>
+      <%= embedded_svg 'icon_15866.svg', class: "tool" %>
       <label>Bookmark</label>
     <% end %>
 
     <%=link_to "#", :id=>"fork_riddle", "data-fork-url" => url_for([:fork, @riddle]), title: "Fork your own version", :class=> "item" do %>
-      <%= image_tag 'icon_15866.svg' %>
+      <%= embedded_svg 'icon_15866.svg', class: "tool" %>
       <label>Fork</label>
     <% end %>
 

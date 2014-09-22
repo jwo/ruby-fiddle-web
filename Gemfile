@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.15'
+gem 'rails', '3.2.19'
 gem 'foundation-rails'
 gem "simple_form", :git => "git://github.com/jwo/simple_form.git", :branch=>"zurb_integration"
 gem "haml-rails"
@@ -9,10 +9,10 @@ gem 'jquery-rails'
 gem "compass-rails", ">=0.12"
 gem "paper_trail", '~> 2'
 gem "has_tokens", "1.0.1"
-gem "airbrake"
 gem "activegist"
 gem "puma"
 gem "pg"
+gem 'nokogiri'
 
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
