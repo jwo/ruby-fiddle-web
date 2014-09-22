@@ -7,13 +7,13 @@ class RiddlesController < ApplicationController
   end
 
   def create
-    @riddle = Riddle.create(params[:riddle].slice(:code))
+    @riddle = Riddle.create params.require(:riddle).permit(:code)
     respond_with @riddle, :notice=>"Riddle created"
   end
 
   def update
     @riddle = Riddle.for_token(params[:id])
-    @riddle.update_attributes(params[:riddle].slice(:code))
+    @riddle.update params.require(:riddle).permit(:code)
     respond_with @riddle, :notice=>"Riddle updated"
   end
 
