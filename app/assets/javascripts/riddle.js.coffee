@@ -1,9 +1,10 @@
 $ ->
   $("#run_riddle").on "click", (event) =>
-    $("#run_riddle .c").addClass("rotate")
     event.preventDefault()
     root.codeEditor.save()
+    $("#run_riddle .c").addClass("rotate")
     $("#riddle_form").trigger("submit.rails")
+
   $("#save_riddle").on "click", (event) ->
       event.preventDefault()
       root.codeEditor.save()

@@ -1,0 +1,38 @@
+<div class="reveal-modal" id="fork">
+  <h4>Fork RubyFiddle!</h4>
+  <p class="lead">What does this mean?</p>
+  <p>In Github, forking is a way that you can build upon someone else's code. </p>
+  <p>Once the project you have forked the code, you can update it from that point on.</p>
+  <h4 class="github-parent">You can find us here:</h4>
+  <ul class="block-grid three-up">
+    <li>
+      <%= link_to "https://github.com/jwo/ruby-fiddle-web", "https://github.com/jwo/ruby-fiddle-web", :class=> "icon-github-sign icon-large" %>
+    </li>
+    <li>
+      <%= link_to "https://github.com/jwo/ruby-fiddle-exec", "https://github.com/jwo/ruby-fiddle-exec", :class=> "icon-github-sign icon-large" %>
+    </li>
+    <li>
+      <%= link_to "https://github.com/jwo/jruby-sandbox", "https://github.com/jwo/jruby-sandbox", :class=> "icon-github-sign icon-large" %>
+    </li>
+  </ul>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+<div class="reveal-modal" id="security">
+  <h4>Security Concerns?</h4>
+  <p class="lead">RubyFiddle grew up a little bit on June 14, 2012. </p>
+  <p>We execute in a restricted environment on Heroku and unfortunately, system calls and Ruby classes cause problems. </p>
+  <p>Due to such security concerns, we had to disable things like #{link_to "re-opening a class (String)", "http://rubyfiddle.com/riddles/50c9b/2"}</p>
+  <ul class="block-grid three-up no-bullet">
+    <li>
+      <%= link_to "Delete all files", "http://rubyfiddle.com/riddles/0a805", class: :button %>
+    </li>
+    <li>
+      <%= link_to "while { fork }", "http://rubyfiddle.com/riddles/0a805/7", class: :button %>
+    </li>
+    <li>
+      <%= link_to "Read the /etc/passwd", "http://rubyfiddle.com/riddles/0a805/2", class: :button %>
+    </li>
+  </ul>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+

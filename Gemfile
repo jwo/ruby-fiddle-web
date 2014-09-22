@@ -3,13 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.19'
 gem 'foundation-rails'
 gem "simple_form", :git => "git://github.com/jwo/simple_form.git", :branch=>"zurb_integration"
-gem "haml-rails"
-gem 'sqlite3'
 gem 'jquery-rails'
-gem "compass-rails", ">=0.12"
 gem "paper_trail", '~> 2'
 gem "has_tokens", "1.0.1"
-gem "activegist"
 gem "puma"
 gem "pg"
 gem 'nokogiri'
@@ -20,12 +16,12 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
   gem "quiet_assets"
-  gem 'therubyracer'
 end
 
 group :development, :test do
   gem "dotenv-rails"
   gem "rspec-rails", ">= 2.9.0"
+  gem 'sqlite3'
 end
 
 group :test do

@@ -20,15 +20,10 @@
   </head>
   <body>
     <%= render partial: "layouts/navbar" %>
-    <%= render partial: "layouts/flash" %>
-    <div class="container">
-      <%= yield %>
-    </div>
+    <%= yield %>
+
     <script>
-      
       $(document).foundation();
-
-
     </script>
   </body>
 </html>

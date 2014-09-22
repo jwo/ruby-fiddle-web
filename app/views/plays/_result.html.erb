@@ -1,0 +1,27 @@
+<% if @execution_exception.present? %>
+  <div class="riddle-panel">
+    <h5>Wowsers, something went wrong!</h5>
+    <div class="alert-box">You're feedback would be greatly appreciated! Please click feedback on the right and tell us what code you submitted. We will look into it immediately. </div>
+    <p>Thanks for trying out RubyFiddle</p>
+  </div>
+<% end %>
+<% if @riddle_result.present? %>
+  <div class="panel callout">
+    <h6>Output</h6>
+    <hr/>
+    <code>
+      <% @riddle_result.output.each do |output| %>
+        <%= output %>
+        <br/>
+      <% end %>
+      <% if @riddle_result.result.present? %>
+        <%= " => #{@riddle_result.result}" %>
+        <br/>
+      <% end %>
+      <% if @riddle_result.exception.present? %>
+        <%= simple_format @riddle_result.exception %>
+      <% end %>
+    </code>
+  </div>
+<% end %>
+
