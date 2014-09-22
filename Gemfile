@@ -20,7 +20,7 @@ end
 
 group :development, :test do
   gem "dotenv-rails"
-  gem "rspec-rails", ">= 2.9.0"
+  gem "rspec-rails", "~>2.9.0"
   gem 'sqlite3'
 end
 
