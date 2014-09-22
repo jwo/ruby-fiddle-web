@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+ruby '2.1.3'
+
 gem 'rails', '3.2.19'
 gem 'foundation-rails'
 gem "simple_form", :git => "git://github.com/jwo/simple_form.git", :branch=>"zurb_integration"

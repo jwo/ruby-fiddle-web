@@ -1,6 +1,8 @@
 Ruby Fiddle
 -----------
 
+[![Build Status](https://travis-ci.org/jwo/ruby-fiddle-web.svg?branch=master)](https://travis-ci.org/jwo/ruby-fiddle-web)
+
 Ability to create ruby snippets, run them, fork them, share them, eat them.
 
 You can see on the web at http://rubyfiddle.com
@@ -10,6 +12,7 @@ Execution takes place in a separate service, under JRuby, to remove access to th
 TODO
 ----
 
+1. Upgrade to Rails 4.2 (use http://railsdiff.org/)
 1. Allow inclusion of gems like ActiveSupport, RSpec
 
 Created by
