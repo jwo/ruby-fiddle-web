@@ -1,5 +1,5 @@
 
-<%= simple_form_for(@riddle, url: play_path, :remote => true, :method => :post, disable_with: "Running That Ruby!", :html=>{:id=>"riddle_form"}) do |f| %>
+<%= form_for(@riddle, url: play_path, :remote => true, :method => :post, disable_with: "Running That Ruby!", :html=>{:id=>"riddle_form"}) do |f| %>
 <div class="icon-bar three-up">
   <%= link_to "#", id: "run_riddle" do %>
     <div class="c">
@@ -29,7 +29,7 @@
   <% end %>
 </div>
 
-<%=f.input :code, :as => :text, label: false, input_html: {id: "riddle_code"} %>
+<%=f.text_area :code, input_html: {id: "riddle_code"} %>
 
   
 <% end %>

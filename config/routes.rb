@@ -5,6 +5,6 @@ Rubyfiddle::Application.routes.draw do
       put :fork
     end
   end
-  match 'riddles/:id/:version' => 'riddles#show', :as => :versioned_riddle, :constraints => { :version=> /\d*/}
-  match 'plays/run' => "plays#run", as: :play
+  get 'riddles/:id/:version' => 'riddles#show', :as => :versioned_riddle, :constraints => { :version=> /\d*/}
+  post 'plays/run' => "plays#run", as: :play
 end

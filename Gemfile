@@ -1,13 +1,11 @@
 source 'https://rubygems.org'
 
-
 ruby '2.1.3'
 
-gem 'rails', '3.2.19'
+gem 'rails', '4.1.6'
 gem 'foundation-rails'
-gem "simple_form", :git => "git://github.com/jwo/simple_form.git", :branch=>"zurb_integration"
 gem 'jquery-rails'
-gem "paper_trail", '~> 2'
+gem 'paper_trail', '~> 3.0.5'
 gem "has_tokens", "1.0.1"
 gem "puma"
 gem "pg"
@@ -18,17 +16,17 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :assets do
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'uglifier', '>= 1.0.3'
-  gem "quiet_assets"
-end
+gem 'sass-rails', '~> 4.0.3'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem "quiet_assets"
+
 
 group :development, :test do
   gem "dotenv-rails"
   gem "rspec-rails", "~>2.9.0"
   gem 'sqlite3'
+  gem 'spring'
 end
 
 group :test do
