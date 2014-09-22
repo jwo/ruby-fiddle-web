@@ -1,0 +1,41 @@
+<div class="row full-width">
+  <div class="large-8 columns">
+    <%= render partial: "form" %>
+  </div>
+  <div class="large-4 columns">
+    <div id="riddle_result" class="panel">
+      <h4>Welcome to RubyFiddle </h4>
+      <p>We wanted a way for people to experience some Ruby in the browser, as well as have a platform that can send cool Ruby scripts to one another.</p>
+      <hr/>
+      <h4>Sample Riddles</h4>
+      <ul class="three-up no-bullet">
+        <li>
+          <%= link_to "99 Bottles of Beer", "http://rubyfiddle.com/riddles/8bda7", class: :g %>
+        </li>
+        <li>
+          <%= link_to "Instance variable get", "http://rubyfiddle.com/riddles/c07a2", class: :g %>
+        </li>
+        <li>
+          <%= link_to "Using Yield to log \"stuff\"", "http://rubyfiddle.com/riddles/10504/9", class: :g %>
+        </li>
+      </ul>
+      <h4>Key Bindings</h4>
+      <ul class="stack-for-small round secondary button-group key-bindings">
+        <li>
+          <%= link_to "None", "#", class: "small button selected", "data-keybinding"=>"" %>
+        </li>
+        <li>
+          <%= link_to "vim", "#", class: "small button", "data-keybinding"=>"vim" %>
+        </li>
+        <li>
+          <%= link_to "emacs", "#", class: "small button", "data-keybinding"=>"emacs" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <%= render partial: "layouts/modals" %>
+  <%= render partial: 'layouts/footer' %>
+</div>
+

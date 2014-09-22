@@ -1,8 +1,9 @@
 <% if @riddle.errors.any? %>
-  var	error_message = "<%= escape_javascript(@riddle.errors.full_messages.join(', ')) %>";
-	$(".form-field.error").remove();
-	$("<div class='form-field error'><small>" + error_message + "</small></div>").insertBefore("#riddle_form input.code");
-	$("#riddle_form").parent().effect("highlight", {}, 3000);
+  var error_message = "<%= escape_javascript(@riddle.errors.full_messages.join(', ')) %>";
+  $(".field-error").remove();
+  $('<div id="field-error" data-alert="" class="alert-box alert "> ' + error_message + '<a href="" class="close">×</a> </div>').insertBefore("#riddle_form ");
+  $(document).foundation('alert','events')
+
 <% else %>
   window.location.replace("<%= url_for(@riddle) %>");
 <% end %>

@@ -2,21 +2,23 @@
 <%= simple_form_for(@riddle, url: play_path, :remote => true, :method => :post, disable_with: "Running That Ruby!", :html=>{:id=>"riddle_form"}) do |f| %>
 <div class="icon-bar three-up">
   <%= link_to "#", id: "run_riddle" do %>
-    <%= embedded_svg 'icon_1541.svg', class: "tool"%>
-    <label>Run</label>
+    <div class="c">
+      <%= embedded_svg 'icon_38504.svg', class: "tool"%>
+      <label>Run</label>
+    </div>
   <% end %>
 
   <% if @riddle.new_record? %>
     <%= link_to "#", id: "save_riddle" do %>
-      <%= embedded_svg 'icon_14215.svg', class: "tool" %>
+      <%= embedded_svg 'icon_56193.svg', class: "tool" %>
       <label>Save</label>
     <% end %>
 
   <% else %>
 
     <%= link_to "#", :id=>"update_riddle", "data-update-url" => url_for(@riddle), title: "Save a new version", :class=> "item" do %>
-      <%= embedded_svg 'icon_15866.svg', class: "tool" %>
-      <label>Bookmark</label>
+      <%= embedded_svg 'icon_56193.svg', class: "tool" %>
+      <label>Update</label>
     <% end %>
 
     <%=link_to "#", :id=>"fork_riddle", "data-fork-url" => url_for([:fork, @riddle]), title: "Fork your own version", :class=> "item" do %>
@@ -27,7 +29,7 @@
   <% end %>
 </div>
 
-<%=f.input :code, :as => :text, label: false, placeholder: "Step Only: Enter your ruby here", input_html: {id: "riddle_code"} %>
+<%=f.input :code, :as => :text, label: false, input_html: {id: "riddle_code"} %>
 
   
 <% end %>

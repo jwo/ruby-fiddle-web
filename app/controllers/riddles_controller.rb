@@ -31,16 +31,6 @@ class RiddlesController < ApplicationController
     end
   end
   
-  def gistify
-    gist = ActiveGist.new(:public => true, :description => "testing activegist", :files => {'ruby_fiddle.rb' =>{:content => params[:gist_content] }})
-    
-    if gist.save
-      render :json => {:gist_url => gist.html_url}, :status => :ok
-    else
-      render :json => {:error => "Unable to create"}, :status => :error
-    end  
-  end
-
   def not_found
     render :file => "#{Rails.root}/public/404.html", :status => :not_found 
   end

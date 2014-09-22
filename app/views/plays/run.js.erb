@@ -1,2 +1,3 @@
 $("#riddle_result").html("<%= escape_javascript(render partial: "result")%>");
-$(window).scrollTop($("#riddle_result").offset().top)
+$("#run_riddle .c").removeClass("rotate");
+$(window).scrollTop($("#riddle_result").offset().top);

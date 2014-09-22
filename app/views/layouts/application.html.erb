@@ -1,0 +1,35 @@
+<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html> <![endif]-->
+<!--[if !IE]><!--> <html>             <!--<![endif]-->
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>
+      <%= content_for?(:title) ? yield(:title) : "Ruby Fiddle | Ruby Snippets in the Browser" %>
+    </title>
+    <!--[if lt IE 9]
+      <script>(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")</script>
+    -->
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag "//oss.maxcdn.com/modernizr/2.8.3/modernizr.min.js" %>
+    <%= stylesheet_link_tag    "//fonts.googleapis.com/css?family=Open+Sans:300|Montserrat:700" %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+  </head>
+  <body>
+    <%= render partial: "layouts/navbar" %>
+    <%= render partial: "layouts/flash" %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <script>
+      
+      $(document).foundation();
+
+
+    </script>
+  </body>
+</html>
+

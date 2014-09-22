@@ -1,10 +1,10 @@
 $ ->
   $("#run_riddle").on "click", (event) =>
+    $("#run_riddle .c").addClass("rotate")
     event.preventDefault()
     root.codeEditor.save()
     $("#riddle_form").trigger("submit.rails")
   $("#save_riddle").on "click", (event) ->
-      $(this).text("saving....")
       event.preventDefault()
       root.codeEditor.save()
       $.ajax
@@ -13,7 +13,6 @@ $ ->
           data: $("#riddle_form").serialize(),
           dataType: "script"
   $("#update_riddle").on "click", (event)  ->
-      $(this).text("updating....")
       event.preventDefault()
       root.codeEditor.save()
       $.ajax
@@ -22,7 +21,6 @@ $ ->
           data: $("#riddle_form").serialize(),
           dataType: "script"
   $("#fork_riddle").on "click", (event)  ->
-      $(this).text("forking....")
       event.preventDefault()
       root.codeEditor.save()
       $.ajax
@@ -30,27 +28,12 @@ $ ->
           url: $(this).data("fork-url"),
           data: $("#riddle_form").serialize(),
           dataType: "script"
-  $("#create_gist").on "click", (event)  ->
-      $(this).text("gistifying....")
-      event.preventDefault()
-      gistData = {"gist_content": root.codeEditor.getValue() }
-      $.ajax
-          type: 'POST',
-          url: "/riddles/gistify",
-          data: JSON.stringify(gistData),
-          contentType: "application/json",
-          dataType: "json",
-          success: (data)->
-              console.log data
-              window.open data.gist_url
-          error: (data)->
-              console.log data
 
 
   root = exports ? this
   root.codeEditor = CodeMirror.fromTextArea document.getElementById("riddle_code"),
       mode: "text/x-ruby",
-      tabMode: "indent",
+      tabMode: "spaces",
       matchBrackets: true,
       indentUnit: 2,
       lineNumbers: true,
