@@ -14,6 +14,10 @@ gem "pg"
 gem 'nokogiri'
 gem 'codemirror-rails'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'sass-rails',   '~> 3.2.3'
