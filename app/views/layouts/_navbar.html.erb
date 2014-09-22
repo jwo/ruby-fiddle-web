@@ -1,0 +1,32 @@
+<div class=" sticky">
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+    <h1>
+      <a href="/">
+        RubyFiddle
+      </a>
+    </h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+
+  </ul>
+
+    <ul class="left">
+      <li>
+      <a href="/">
+        <%= embedded_svg 'icon_11621.svg', class: 'icon' %>
+      </a>
+      </li>
+    </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li><%=link_to "Security", "#", "data-reveal-id" => :security %>
+      <li><%=link_to "Github", "#", "data-reveal-id" => :fork %>
+    </ul>
+
+  </section>
+</nav>
+</div>

@@ -1,7 +1,19 @@
 .tool {
   display: block;
   margin: 0 auto;
-  fill: #3498db;
-  width: 5em;
-  height: 5em;
+  fill: #bdc3c7;
+  width: 3em;
+  height: 3em;
+  &:hover {
+    fill: #27ae60;
+  }
 }
+
+#riddle_form {
+  a{
+    &:hover {
+      background-color: inherit;
+    }
+  }
+}
+

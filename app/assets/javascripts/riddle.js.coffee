@@ -46,6 +46,7 @@ $ ->
           error: (data)->
               console.log data
 
+
   root = exports ? this
   root.codeEditor = CodeMirror.fromTextArea document.getElementById("riddle_code"),
       mode: "text/x-ruby",
@@ -53,9 +54,9 @@ $ ->
       matchBrackets: true,
       indentUnit: 2,
       lineNumbers: true,
-      theme: 'rubyblue'
+      theme: 'vibrant-ink'
 
-  $(".segmented_control button").on "click", ->
-      $("button.selected_binding").removeClass('selected_binding')
-      root.codeEditor.setOption('keyMap', $(this).val())
-      $(this).addClass('selected_binding')
+  $(".key-bindings a").on "click", ->
+      $(".key-bindings a").removeClass('selected')
+      root.codeEditor.setOption('keyMap', $(this).data("keybinding"))
+      $(this).addClass('selected')

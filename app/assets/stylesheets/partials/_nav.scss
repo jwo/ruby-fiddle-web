@@ -1,0 +1,20 @@
+.top-bar-section li:not(.has-form) a:not(.button), .top-bar, .top-bar-section ul li , .top-bar-section ul li{
+  background-color: #9B111E;
+}
+
+.top-bar {
+  .name h1 a {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+  }
+  .icon {
+    display: block;
+    margin: 0 auto;
+    fill: #ffffff;
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.25rem;
+  }
+}

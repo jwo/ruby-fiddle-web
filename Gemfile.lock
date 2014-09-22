@@ -44,6 +44,8 @@ GEM
     arel (3.0.3)
     builder (3.0.4)
     chunky_png (1.3.1)
+    codemirror-rails (4.5)
+      railties (>= 3.0, < 5)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -180,6 +182,7 @@ PLATFORMS
 
 DEPENDENCIES
   activegist
+  codemirror-rails
   coffee-rails (~> 3.2.1)
   compass-rails (>= 0.12)
   dotenv-rails

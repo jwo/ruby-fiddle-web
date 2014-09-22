@@ -1,18 +1,21 @@
 #fork.reveal-modal{"data-reveal" => ""}
-  %h2 Fork RubyFiddle!
+  %h4 Fork RubyFiddle!
   %p.lead What does this mean?
   %p In Github, forking is a way that you can build upon someone else's code. 
   %p Once the project you have forked the code, you can update it from that point on.
-  %h2.github-parent You can find us here:
-  %a{:href=>"https://github.com/jwo/ruby-fiddle-web", :class=> "icon-github-sign icon-large"}
+  %h4.github-parent You can find us here:
+  %ul.block-grid.three-up
+    %li=link_to "https://github.com/jwo/ruby-fiddle-web", "https://github.com/jwo/ruby-fiddle-web", :class=> "icon-github-sign icon-large"
+    %li=link_to "https://github.com/jwo/ruby-fiddle-exec", "https://github.com/jwo/ruby-fiddle-exec", :class=> "icon-github-sign icon-large"
+    %li=link_to "https://github.com/jwo/jruby-sandbox", "https://github.com/jwo/jruby-sandbox", :class=> "icon-github-sign icon-large"
   %a.close-reveal-modal &#215;
 
 #security.reveal-modal{"data-reveal" => ""}
-  %h2 Security Concerns?
+  %h4 Security Concerns?
   %p.lead  RubyFiddle grew up a little bit on June 14, 2012. 
   %p  We execute in a restricted environment on Heroku and unfortunately, system calls and Ruby classes cause problems. 
   %p Due to such security concerns, we had to disable things like #{link_to "re-opening a class (String)", "http://rubyfiddle.com/riddles/50c9b/2"}
-  %ul.block-grid.three-up
+  %ul.block-grid.three-up.no-bullet
     %li=link_to "Delete all files", "http://rubyfiddle.com/riddles/0a805", class: :button
     %li=link_to "while { fork }", "http://rubyfiddle.com/riddles/0a805/7", class: :button
     %li=link_to "Read the /etc/passwd", "http://rubyfiddle.com/riddles/0a805/2", class: :button

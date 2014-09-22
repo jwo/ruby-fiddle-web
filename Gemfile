@@ -13,6 +13,7 @@ gem "activegist"
 gem "puma"
 gem "pg"
 gem 'nokogiri'
+gem 'codemirror-rails'
 
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'

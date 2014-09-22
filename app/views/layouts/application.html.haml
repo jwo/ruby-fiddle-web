@@ -10,14 +10,13 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title= content_for?(:title) ? yield(:title) : "Ruby Fiddle | Ruby Snippets in the Browser"
-    = stylesheet_link_tag    "application"
-    = javascript_include_tag "application"
     /[if lt IE 9]
       %script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
     = csrf_meta_tags
-    %link{:href => "//fonts.googleapis.com/css?family=Open+Sans:300,600,700|Montserrat:700|Nunito:300|Ubuntu:300"}/
-    %link{:href => "//fonts.googleapis.com/css?family=Open+Sans:300,600,700|Montserrat:700|Nunito:300"}/
-    =javascript_include_tag "//oss.maxcdn.com/modernizr/2.8.3/modernizr.min.js"
+    = javascript_include_tag "//oss.maxcdn.com/modernizr/2.8.3/modernizr.min.js"
+    = stylesheet_link_tag    "//fonts.googleapis.com/css?family=Open+Sans:300|Montserrat:700"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
   %body
     =render partial: "layouts/navbar"
     =render partial: "layouts/flash"

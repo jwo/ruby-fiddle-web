@@ -1,0 +1,8 @@
+.key-bindings{
+  a {
+    background-color: #7f8c8d;
+    &.selected {
+    background-color: #2c3e50;
+    }
+  }
+}
