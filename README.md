@@ -10,9 +10,7 @@ Execution takes place in a separate service, under JRuby, to remove access to th
 TODO
 ----
 
-1. Made the editor wide and results beneath
-2. Allow inclusion of gems like ActiveSupport, RSpec
-3. Widget to allow embedding
+1. Allow inclusion of gems like ActiveSupport, RSpec
 
 Created by
 ---------
@@ -23,6 +21,7 @@ Contributors
 ------------
 
 * [Haris Amin](https://github.com/hamin)
+* [Sabba Petri](https://github.com/spetri)
 
 Updates
 ------
@@ -31,7 +30,7 @@ Send em! I like Pulls!
 
 MIT License
 -------
-Copyright (C) 2012, Jesse Wolgamott
+Copyright (C) 2012-2014, Jesse Wolgamott
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
