@@ -3,21 +3,21 @@
 <div class="icon-bar three-up">
   <%= link_to "#", id: "run_riddle" do %>
     <div class="c">
-      <%= embedded_svg 'icon_38504.svg', class: "tool"%>
+      <%= embedded_svg 'icon_17184.svg', class: "tool"%>
       <label>Run</label>
     </div>
   <% end %>
 
   <% if @riddle.new_record? %>
     <%= link_to "#", id: "save_riddle" do %>
-      <%= embedded_svg 'icon_56193.svg', class: "tool" %>
+      <%= embedded_svg 'icon_72996.svg', class: "tool" %>
       <label>Save</label>
     <% end %>
 
   <% else %>
 
     <%= link_to "#", :id=>"update_riddle", "data-update-url" => url_for(@riddle), title: "Save a new version", :class=> "item" do %>
-      <%= embedded_svg 'icon_56193.svg', class: "tool" %>
+      <%= embedded_svg 'icon_72996.svg', class: "tool" %>
       <label>Update</label>
     <% end %>
 

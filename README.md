@@ -12,7 +12,6 @@ Execution takes place in a separate service, under JRuby, to remove access to th
 TODO
 ----
 
-1. Upgrade to Rails 4.2 (use http://railsdiff.org/)
 1. Allow inclusion of gems like ActiveSupport, RSpec
 
 Created by
@@ -26,10 +25,16 @@ Contributors
 * [Haris Amin](https://github.com/hamin)
 * [Sabba Petri](https://github.com/spetri)
 
-Updates
-------
+Attributions
+------------
 
-Send em! I like Pulls!
+### SVG Icons
+Thank you for using The Noun Project. This icon is licensed under Creative
+Commons Attribution and must be attributed as:
+
+* Save by iconsmind.com from The Noun Project
+* Bookmark by Joe Harrison from The Noun Project
+
 
 MIT License
 -------
