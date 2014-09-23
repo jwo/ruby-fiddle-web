@@ -1,4 +1,4 @@
-<div class="reveal-modal" id="fork">
+<div class="reveal-modal" id="fork" data-reveal>
   <h4>Fork RubyFiddle!</h4>
   <p class="lead">What does this mean?</p>
   <p>In Github, forking is a way that you can build upon someone else's code. </p>
@@ -17,11 +17,12 @@
   </ul>
   <a class="close-reveal-modal">&#215;</a>
 </div>
-<div class="reveal-modal" id="security">
+<div class="reveal-modal" id="security" data-reveal>
   <h4>Security Concerns?</h4>
   <p class="lead">RubyFiddle grew up a little bit on June 14, 2012. </p>
   <p>We execute in a restricted environment on Heroku and unfortunately, system calls and Ruby classes cause problems. </p>
-  <p>Due to such security concerns, we had to disable things like #{link_to "re-opening a class (String)", "http://rubyfiddle.com/riddles/50c9b/2"}</p>
+  <p>Due to such security concerns, we had to disable things like 
+  </p>
   <ul class="block-grid three-up no-bullet">
     <li>
       <%= link_to "Delete all files", "http://rubyfiddle.com/riddles/0a805", class: :button %>

@@ -11,13 +11,16 @@
         <h4>Sample Riddles</h4>
         <ul class="three-up no-bullet">
           <li>
-          <%= link_to "99 Bottles of Beer", "http://rubyfiddle.com/riddles/7b6a2", class: :g %>
+            <%=link_to "re-opening a class (String)", "http://rubyfiddle.com/riddles/50c9b/5" %>
           </li>
           <li>
-          <%= link_to "Instance variable get", "http://rubyfiddle.com/riddles/c07a2", class: :g %>
+          <%= link_to "99 Bottles of Beer", "http://rubyfiddle.com/riddles/7b6a2" %>
           </li>
           <li>
-          <%= link_to "Using Yield to log \"stuff\"", "http://rubyfiddle.com/riddles/10504/9", class: :g %>
+          <%= link_to "Instance variable get", "http://rubyfiddle.com/riddles/c07a2" %>
+          </li>
+          <li>
+          <%= link_to "Using Yield to log \"stuff\"", "http://rubyfiddle.com/riddles/10504/9" %>
           </li>
         </ul>
       </div>
@@ -33,11 +36,20 @@
           <%= link_to "emacs", "#", class: "small button", "data-keybinding"=>"emacs" %>
         </li>
       </ul>
+
+      <a class="twitter-share-button"
+         href="https://twitter.com/share"
+         data-dnt="true"
+        data-via="jwo"
+        data-text="RubyFiddle: Ruby Snippets in the Browser"
+        
+        >
+          Tweet
+        </a>
+        <script type="text/javascript">
+window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+        </script>
     </div>
   </div>
-</div>
-<div class="row">
-  <%= render partial: "layouts/modals" %>
-  <%= render partial: 'layouts/footer' %>
 </div>
 

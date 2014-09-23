@@ -1,22 +1,44 @@
 <footer>
-  <div class="row full-width">
-    <div class="large-4 columns">
+  <div class="row ">
+    <div class="large-6 columns">
       <div class="centered">
         <p>
           Created By 
-          <%= link_to "@jwo", "http://twitter.com/jwo" %>
+          <a class="twitter-follow-button"
+              href="https://twitter.com/jwo"
+              data-show-count="true"
+              data-lang="en">
+              Follow @jwo
+            </a>
+            <script type="text/javascript">
+window.twttr = (function (d, s, id) {
+      var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+            js.src= "https://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+                }(document, "script", "twitter-wjs"));
+            </script>
+
           for
           <%= link_to "rubyoffrails", "http://rubyoffrails.com" %>
         </p>
       </div>
     </div>
-    <div class="large-4 columns">
-      <p>
-        <a class="icon-twitter-sign icon-large twitter-share-button" data-lang="en" data-via="twitterapi" href="https://twitter.com/share"></a>
-        <a class="icon-github-sign icon-large" href="https://github.com/jwo/ruby-fiddle-web"></a>
-        <a class="icon-github-sign icon-large" href="https://github.com/jwo/rubyfiddle-exec"></a>
+    <div class="large-6 columns">
+      <ul class="inline-list">
+        <li>
+        <a href="https://github.com/jwo/rubyfiddle-exec">Ruby Exec Process</a>
+        </li>
+        <li>
+        <a href="https://github.com/jwo/ruby-fiddle-web">Rails App</a>
+        </li>
+        <li>
+        <a href="https://github.com/jwo/jruby-sandbox">JRuby Sandbox</a>
+        </li>
+      </ul>
       </p>
     </div>
   </div>
 </footer>
-<%= render partial: "layouts/modals" %>
