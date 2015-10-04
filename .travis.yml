@@ -1,6 +1,13 @@
 language: ruby
 rvm:
-  - 2.1.3
-before_script: 
-  - bundle exec rake db:schema:load
-  - bundle exec rake db:migrate
+- 2.1.3
+before_script:
+- bundle exec rake db:schema:load
+- bundle exec rake db:migrate
+deploy:
+  provider: heroku
+  api_key:
+    secure: vFbbYOpw99NH7ATKyxvWQyS978IWWrpLBQH1Ly77qC0znULwu7z9tqHQVzrzjpNdb8yGftubUeRsnQfKNmwDuWHW8M28/ojBZ0ydgY82SwhM1C3LIKpXTX7fWC+VlKAUureEDmPzeKOBZ6b7L262iEZVby83laV3DzHhNF8msOQ=
+  app: rubyfiddle
+  on:
+    repo: jwo/ruby-fiddle-web
